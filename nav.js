@@ -1,36 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
-  var exItems = document.querySelectorAll('.ex'); // 모든 ex 요소 가져오기
-  var expansionItems = document.querySelectorAll('.expansion'); // 모든 expansion 요소 가져오기
+var exItems = document.querySelectorAll('.ex');
+var expansionItems = document.querySelectorAll('.expansion');
 
-  // 모든 expansion 숨기기 (초기 상태)
-  expansionItems.forEach(exp => exp.style.display = "none");
+if (exItems.length === expansionItems.length) {
+    exItems.forEach((ex, index) => {
+        ex.addEventListener("mouseenter", () => {
+            expansionItems[index].style.display = "block";
+        });
 
-  // 각 ex 요소에 대해 이벤트 추가
-  exItems.forEach((ex, index) => {
-      ex.addEventListener("mouseenter", () => {
-          // 모든 expansion 숨기고, 현재 index의 expansion만 보이게 하기
-          expansionItems.forEach(exp => exp.style.display = "none");
-          if (expansionItems[index]) {
-              expansionItems[index].style.display = "block";
-          }
-      });
+        ex.addEventListener("mouseleave", () => {
+            expansionItems[index].style.display = "none";
+        });
+    });
+}
 
-      ex.addEventListener("mouseleave", () => {
-          if (expansionItems[index]) {
-              expansionItems[index].style.display = "none";
-          }
-      });
 
-      // expansion에도 마우스 올려두면 유지 (마우스 올린 후 메뉴를 클릭할 수 있도록)
-      if (expansionItems[index]) {
-          expansionItems[index].addEventListener("mouseenter", () => {
-              expansionItems[index].style.display = "block";
-          });
+var notices = document.querySelector('.notices');
 
-          // expansion에서 벗어나면 숨기기
-          expansionItems[index].addEventListener("mouseleave", () => {
-              expansionItems[index].style.display = "none";
-          });
-      }
-  });
-});
+let index = 0;
+
+if (notices != undefined) {
+    let p = document.createElement('p');
+    let text = ['[당첨자 발표] 뉴이어 전자영수증 이벤트', '크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내'
+        , '[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트'
+    ];
+
+
+
+    p.textContent = text[index];
+    notices.appendChild(p);
+    
+    function updateText() {
+        p.textContent = text[index];
+        index = (index + 1) % text.length;
+    }
+
+    updateText();
+    setInterval(updateText, 2000);
+}
+
+

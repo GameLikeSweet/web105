@@ -94,6 +94,10 @@ header{
 
 .nav_about{
     background-image:url("./images/main_menu_pattern.jpg");
+    color:green;
+}
+.nav_about div::first-line{
+    color:white;
 }
 
 .nav_about_text{
@@ -109,7 +113,7 @@ section{
     margin-top:120px;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 2000px;
+    align-content: center;
 }
 
 article{
@@ -169,26 +173,37 @@ article{
     bottom: 0;
 }
 
-.v_box{
+.r_box{
     padding: 10px 0;
-    border-color: #592B18;
-    color: #592B18;
+    border-color: #272727;
+    color:#272727;
     width: 130px;
-    position:absolute;
-    top:330px;
-    left: 155px;
     border-style: solid;
     border-radius: 10%;
     text-align: center;
     transition-duration: 1s;
+    box-sizing: border-box;
 }
 
-.v_box:hover{
+.r_box:hover{
+    color:white;
+    background-color: #272727;
+}
+
+.visual>.r_box{
+    top:330px;
+    left: 155px;
+    position:absolute;
+    border-color: #592B18;
+    color: #592B18;
+}
+
+.r_box:hover{
     background-color: #592B18;
     color:white
 }
 
-.v_box>a,p{
+.r_box>a,p{
     margin: 0;
     padding: 0;
 }
@@ -201,7 +216,6 @@ article{
 .notice .n_top{
     width:100%;
     height: 62px;
-    background-color: red;
     display: flex;
     flex-wrap: wrap;
 }
@@ -224,6 +238,19 @@ article{
     align-items: center;
 }
 
+.notices {
+    width: 70%;
+    margin-left: 20px;
+}
+
+.n_plus{
+    background-color: white;
+    width:20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
 .n_main{
     height:693px;
     width: 829px;
@@ -236,4 +263,114 @@ article{
     top: 40px;
     left:50%;
     background-color: lightgreen;
+}
+
+
+.rewards{
+    height: 241px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    background-color:#272727;
+    position: relative;
+}
+
+.login_bg{
+    background-image: url('./images/rewards.jpg');
+    margin:0 auto;
+    width:1100px;
+    height: 241px;
+    position:relative
+}
+
+.login_l{
+    background-color:#272727;
+    width:50%;
+    height: 100%;
+    position:absolute;
+}
+.login_r{
+    width:50%;
+    height: 100%;
+    background-color: #D5C798;
+    position:absolute;
+    right: 0;
+}
+
+.login_box{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.login_box .r_box{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-shrink: 0;
+}
+.login_box .r_box:hover{
+    border-color: #272727;
+    color:white;
+}
+
+.login_box .r_box:nth-child(2){
+    width:120px;
+    margin-left: 10px;
+}
+.login_box .r_box:nth-child(3){
+    width:260px;
+    margin-top:10px;
+}
+
+
+.login_box .r_bot:hover{
+    background-color: #272727;
+    transition-duration: 1s;
+}
+
+.vid{
+    height: 700px;
+    width: 100%;
+}
+
+.youtube {
+    width:100%;
+}
+
+.vid iframe{
+    width:100%;
+    height: 100%;
+}
+
+.imgs{
+    width:100%;
+}
+
+.ice_coffee{
+    background-image: url('images/season_product_bg.jpg');
+    background-size:contain;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.starbucks_r{
+    background-image: url('images/reserve_bg.jpg');
+    height: 400px;
+    width: 100%;
+}
+
+.ic_text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
