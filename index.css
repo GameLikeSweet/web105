@@ -8,6 +8,9 @@ body{
     flex-direction: column;
 }
 
+/* 헤더 */
+
+
 header{
     box-sizing: border-box;
     float:left;
@@ -66,16 +69,29 @@ header{
     border-top-right-radius: 10%;
 }
 .Nav_bot li:hover{
-    background-color: rgb(60, 53, 53);
+    background-color: #333;
     color:green
 }
 
+.badges{
+    position: absolute;
+    top: 132px;
+    right:12px;
+}
+
+.badges{
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 .expansion{
-    background-color:rgb(60, 53, 53);
+    background-color:#333;
     list-style: none;
     font-size:small;
     color:lightgray;
     display: none;
+
 }
 .nav_ex{
     width: 1100px;
@@ -105,7 +121,7 @@ header{
     margin: auto;
 }
     
-
+/* 섹션 */
 section{
     display: flex;
     box-sizing:border-box;
@@ -114,6 +130,7 @@ section{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    
 }
 
 article{
@@ -122,6 +139,8 @@ article{
     background-color: greenyellow;
     width:100%;
 }
+
+/* 이미지 */
 
 .main_img1{
     background-image:url(./images/visual_bg.jpg);
@@ -198,7 +217,7 @@ article{
     color: #592B18;
 }
 
-.r_box:hover{
+.visual>.r_box:hover{
     background-color: #592B18;
     color:white
 }
@@ -207,9 +226,12 @@ article{
     margin: 0;
     padding: 0;
 }
+
+/* 공지사항 */
+
 .notice{
     width:100%;
-    background-color: yellow;
+    background-color: white;
     flex-wrap: wrap;
 }
 
@@ -224,10 +246,11 @@ article{
     widtH: 50%;
     height: 100%;
     display: flex;
-    background-color: gray;
+    background-color: #333;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    color:white
 }
 
 .notice .n_top .n_top_r{
@@ -236,35 +259,74 @@ article{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.n_top_r a{
+    background-color: #333;
+    width:100px;
+    height: 100%;
+    display: inline-block;
+    left:0;
+    position:absolute;
+    align-content: center;
+    text-align: center;
 }
 
 .notices {
-    width: 70%;
     margin-left: 20px;
 }
 
 .n_plus{
     background-color: white;
-    width:20px;
-    height: 20px;
-    text-align: center;
+    display:block;
+    width:30px;
+    height: 30px;
     border-radius: 50%;
+    font-size: 30px;
+    line-height: 1;
+    margin:auto;
 }
 
-.n_main{
-    height:693px;
-    width: 829px;
-    display:flex;
+.promotion {
+    height: 693px;
+    width: 1100px;
+    overflow: hidden;
+    margin:0 auto;
 }
 
-.n_main .n_slide{
-    height:553px;
+.promotion .swiper {
+    height: 553px;
+    width: calc(819px * 3) + 20px;
+    top:40px;
+    background-color: white;
+}
+
+.promotion .swiper-wrapper {
+    display: flex;
+}
+
+.promotion .swiper-slide {
+    width: 819px;
+    height: 553px;
+    display: flex;
+    background: lightgray;
+}
+
+.promotion .swiper-pagination{
+    bottom: 40px;
     position:absolute;
-    top: 40px;
-    left:50%;
-    background-color: lightgreen;
+    text-align: center;
 }
 
+.n_img1{
+    background-image: url('./images/promotion_slide1.jpg');
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100%;
+}
+
+/*리워드*/
 
 .rewards{
     height: 241px;
@@ -334,6 +396,8 @@ article{
     transition-duration: 1s;
 }
 
+/*영상 및 이미지*/
+
 .vid{
     height: 700px;
     width: 100%;
@@ -341,15 +405,54 @@ article{
 
 .youtube {
     width:100%;
+    position: relative;
+    
 }
 
 .vid iframe{
     width:100%;
     height: 100%;
+    position:absolute;
+    z-index: 0;
 }
+
+.float_imgs{
+    width:1100px;
+    height: 100%;
+    margin:0 auto;
+    position: relative
+}
+
+.float_img1{
+    float:left;
+    z-index: 3;
+    position:absolute;
+    top: 50px;
+}
+
+.float_img2{
+    float:left;
+    z-index: 3;
+    position:absolute;
+    top: 350px;
+    left:150px;
+}
+
+.float_img3{
+    float:left;
+    z-index: 3;
+    position:absolute;
+    top: 550px;
+    right:50px;
+}
+
+/*이미지*/
 
 .imgs{
     width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .ice_coffee{
@@ -361,6 +464,12 @@ article{
     justify-content: center;
     align-content: center;
 }
+.ic_text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .starbucks_r{
     background-image: url('images/reserve_bg.jpg');
@@ -368,9 +477,249 @@ article{
     width: 100%;
 }
 
-.ic_text{
+.st_box{
+    width:1100px;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.st_logo{
+    justify-self: center;
+    align-content: center;
+}
+
+.st_text{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin:auto 0;
+    padding-left: 50px;
+}
+.st_text .r_box{
+    color:#B06444;
+    border-color: #B06444;
+}
+
+.st_text .r_box:hover{
+    color:#ffffff;
+    border-color: #B06444;
+    background-color: #B06444;
+}
+
+.st_img{
+    justify-self: center;
+    align-content: center;
+}
+
+.pick_your{
+    background-image: url('images/favorite_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.pic_box{
+    width: 1100px;
+    padding: 110px 0;
+    margin: 0 auto;
+}
+
+.pic_text{
+    margin: 100px;
+    width:370px;
+    text-align: right;
+}
+
+.pic_text div{
+    margin-top:30px;
+}
+
+.pic_text .r_box{
+    padding: 10px 0;
+    border-color: white;
+    color:white;
+    width: 130px;
+    border-style: solid;
+    border-radius: 10%;
+    text-align: center;
+    transition-duration: 1s;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-top:20px;
+}
+
+.pic_text .r_box:hover{
+    background-color: white;
+    color: unset;
+}
+
+.reserve{
+    background-image:url('./images/reserve_store_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserve_box{
+    width: 1100px;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.reserve_front{
+    width:334px;
+    height: 334px;
+    margin: auto;
+    transition-duration: 1s;
+    
+}
+.reserve_front:hover{
+    transform:rotateY(180deg)
+}
+
+.reserve_back{
+    width:334px;
+    height: 334px;
+    margin: auto;
+    display: none;
+    transition-duration: 1s;
+}
+
+.find_store{
+    height: 400px;
+    width:100%;
+    background-image:url('./images/find_store_bg.jpg')
+}
+
+.fs_boxs{
+    width:1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fs_img1{
+    position:absolute;
+    left:400px;
+    top:0;
+}
+
+.fs_img2{
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+
+.fs_img3{
+    position:absolute;
+    left:0;
+    top:-60px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+.fs_img4{
+    position:absolute;
+    left:250px;
+    top:150px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.fs_text{
+    position:absolute;
+    top:120px;
+    left:550px;
+}
+
+footer{
+    background-color: #333;
+}
+
+.awards{
+    height:40px;
+    width:1100px;
+    padding: 40px 0;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.awards .f_swiper{
+    width:1100px;
+    height:40px;
+    display: flex;
+}
+.f_swiper .swiper-wrapper{
+    
+    display: flex;
+}
+.f_swiper .swiper-slide {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    background-color: white;
+}
+
+
+.awards .footer_box{
+    width:1100px;
+    padding:40px 0 60px 0;
+    margin:0 auto;
+    text-align: center;
+}
+
+.footer_box>ul{
+    display:flex;
+    font-size:small;
+    color:white;
     justify-content: center;
+}
+
+.footer_box>ul li{
+    margin-left:10px;
+    margin-right: 15px;
+}
+
+.footer_box>ul li:first-child{
+    color:green;
+    list-style: none;
+}
+
+.btns {
+    display:flex;
+    justify-content: center;
+}
+
+.btns .r_box{
+    color:white;
+    border-color: white;
+    margin-left: 10px;
+}
+
+.btns .r_box:hover{
+    color: unset;
+    background-color: white;
+}
+
+.info{
+    color: lightgray;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.info ul{
+    display: flex;
+    list-style: none;
+    font-size:small;
+    justify-content: center;
+}
+.info ul li{
+    margin-left: 20px;
 }
