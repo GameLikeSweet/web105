@@ -78,11 +78,11 @@ header {
     position: absolute;
     top: 132px;
     right: 12px;
+    overflow: hidden;
 }
 
-.badges {
+.badge {
     margin-bottom: 12px;
-    overflow: hidden;
     border-radius: 10px;
 }
 
