@@ -30,6 +30,7 @@ header {
     width: 1100px;
     height: 120px;
     margin: 0 auto;
+    
 }
 
 .logo {
@@ -37,10 +38,41 @@ header {
     margin: auto 0;
 }
 
+.search {
+    background-color: pink;
+    display:flex;
+    justify-content: flex-end;
+    align-content: center;
+
+}
+
+.search .flip{
+    height:30px;
+    width:30px;
+    font-family: 'Material Icons';
+    font-size:20px;
+    text-align: center;
+    transition-duration: 1s;
+}
+
+.search .open{
+    border-color: green;
+    height: 30px;
+    width: 150px;
+    font-size:20px;
+    transition-duration: 1s;
+}
+
 .Nav_box {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    display:flex;
+}
+
+.Nav_top{
+    display: flex;
+
 }
 
 .Nav_box ul {
@@ -52,6 +84,8 @@ header {
 
 .Nav_top li {
     margin: 0 5px;
+    justify-content: center;
+    align-content: center;
 }
 
 .Nav_bot {
@@ -203,7 +237,7 @@ article {
     color: #272727;
     width: 130px;
     border-style: solid;
-    border-radius: 10%;
+    border-radius: 5px;
     text-align: center;
     transition-duration: 1s;
     box-sizing: border-box;
@@ -320,12 +354,10 @@ p {
 
 .promotion .swiper {
     width: calc(819px * 3 + 20px);
-    /* 3개 슬라이드 + 2개 공백 */
     height: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* 화면 중앙 정렬 */
     overflow: hidden;
 }
 
@@ -339,9 +371,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 819px !important;
-    /* 슬라이드 크기 고정 */
     height: 553px !important;
-    /* 고정된 높이 */
     opacity: 0.5;
     transition: opacity 0.5s ease-in-out
 }
@@ -665,6 +695,9 @@ p {
     background-image: url('images/favorite_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
 }
 
