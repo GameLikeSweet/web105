@@ -6,7 +6,6 @@ tl.to(".float_imgs", { duration: 2, y: 0 });
 
 
 gsap.registerPlugin(ScrollTrigger);
-console.log(document.querySelector(".ic_img")); 
 
 
 gsap.utils.toArray(".from_r").forEach((el) => {
