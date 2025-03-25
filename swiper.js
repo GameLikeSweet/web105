@@ -1,3 +1,15 @@
+
+var notices = new Swiper('.n_swiper', {
+    direction: 'vertical',
+    autoplay: {
+        delay: 5000,
+    },
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop:true,
+});
+
+
 var open_promotion = document.getElementsByClassName('open_promotion')[0];
 var promotion = document.getElementsByClassName('promotion')[0];
 

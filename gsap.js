@@ -12,13 +12,12 @@ gsap.utils.toArray(".from_r").forEach((el) => {
     gsap.from(el, {
         scrollTrigger: {
             trigger: el,
-            start: "top 90%",
-            end: "top 70%",
-            scrub: true,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
         },
         opacity: 0,
         x: 100,
-        duration: 2,
+        duration: 1,
     });
 });
 
@@ -26,13 +25,12 @@ gsap.utils.toArray(".from_l").forEach((el) => {
     gsap.from(el, {
         scrollTrigger: {
             trigger: el,
-            start: "top 90%",
-            end: "top 70%",
-            scrub: true,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
         },
         opacity: 0,
         x: -100,
-        duration: 2,
+        duration: 1,
     });
 });
 
