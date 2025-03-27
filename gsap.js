@@ -45,3 +45,11 @@ gsap.to(".badges",{
     }
 });
 
+const tl2 = gsap.timeline({repeat: 0, repeatDelay: 0})
+
+document.querySelectorAll('.animation_v').forEach(ani => {
+    tl2.from(ani, {
+        opacity: 0,
+        duration: 1
+    });
+});

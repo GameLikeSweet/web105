@@ -26,9 +26,9 @@
                     <li>Customer Service & Ideas</li>
                     <li>|</li>
                     <li>Find a Store</li>
-                    <div class = 'search'><input class="flip" type="text" placeholder="search"> </div>
+                    <div class='search'><input class="flip" type="text" placeholder="search"> </div>
                 </ul>
-                
+
                 <ul class="Nav_bot">
                     <li class="ex">COFFEE</li>
                     <li class="ex">MENU</li>
@@ -259,12 +259,12 @@
 
         <article class="main_img1">
             <div class="visual">
-                <div class="v_title"><img src="./images/visual_title.png"></div>
-                <div class="v_cup1"><img src="./images/visual_cup1.png"></div>
-                <div class="v_cup2"><img src="./images/visual_cup2.png"></div>
-                <div class="v_cup1_t"><img src="./images/visual_cup1_text.png"></div>
-                <div class="v_cup2_t"><img src="./images/visual_cup2_text.png"></div>
-                <div class="v_spoon"><img src="./images/visual_spoon.png"></div>
+                <div class="v_title"><img class="animation_v" src="./images/visual_title.png"></div>
+                <div class="v_cup1"><img class="animation_v" src="./images/visual_cup1.png"></div>
+                <div class="v_cup2"><img class="animation_v" src="./images/visual_cup2.png"></div>
+                <div class="v_cup1_t"><img class="animation_v" src="./images/visual_cup1_text.png"></div>
+                <div class="v_cup2_t"><img class="animation_v" src="./images/visual_cup2_text.png"></div>
+                <div class="v_spoon"><img class="animation_v" src="./images/visual_spoon.png"></div>
                 <div class="r_box">
                     <p>자세히 보기</p>
                 </div>
@@ -409,18 +409,26 @@
         </article>
         <article class="reserve">
             <div class="reserve_box">
-                <div class="reserve_front"></div>
+                <div class="reserve_flip">
+                    <div class="reserve_front"></div>
+                    <div class="reserve_back"></div>
+                </div>
+
             </div>
         </article>
         <article class="find_store">
             <div class="fs_boxs">
                 <div class='fs_img1'><img src="./images/find_store_texture1.png"></div>
                 <div class='fs_img2'><img src="./images/find_store_texture2.png"></div>
-                <div class='fs_img3'>
-                    <div class="from_l"><img src="./images/find_store_picture1.jpg"></div>
+                <div class="from_l">
+                    <div class='fs_img3'>
+                        <img src="./images/find_store_picture1.jpg">
+                    </div>
                 </div>
-                <div class='fs_img4'>
-                    <div class="from_l"><img src="./images/find_store_picture2.jpg"></div>
+                <div class="from_l">
+                    <div class='fs_img4'>
+                        <img src="./images/find_store_picture2.jpg">
+                    </div>
                 </div>
                 <div class='fs_text'>
                     <div class='fs_img5'>
@@ -487,7 +495,6 @@
     <script src="./nav.js"></script>
     <script src="./swiper.js"></script>
     <script src="./gsap.js"></script>
-    <script src="./reserve.js"></script>
 </body>
 
 </html>
